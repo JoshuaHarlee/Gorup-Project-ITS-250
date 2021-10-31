@@ -1,13 +1,12 @@
 age = 100
 ASVAB_score = 99
-good_credit = 800
+good_credit = 650
 bad_credit = 649
 
 def main():
     first_name = input('Enter your first name: ')
     last_name = input('Enter your last name: ')
     current_education = input('Enter your Ed: ')
-    credit_score = input('Enter your credit score: ')
     height = input('Enter your height in inches: ')
     weight = input('Enter your weight: ')
     disqualifiers ()
@@ -15,29 +14,30 @@ def main():
  
 def disqualifiers():
     age = int(input('Enter your age: ')) 
-    if age >= 42:
+    if age <= 42:
         print (' Qualified for age ')
-    elif age <= 42:
+    elif age >= 42:
         print ('Disqualified for age')
     disqualifiers2()
 
 
 def disqualifiers2():
-    ASVAB_score = int(input('Enter ASVAB score:'))
+    ASVAB_score = int(input('Enter ASVAB score: '))
     if ASVAB_score >= 31:
-        print ('qualified for score')
+        print ('Qualified ASVAB Score')
     elif ASVAB_score < 31:
-        print ('disqualified for score ')
+        print ('Disqualified ASVAB Score ')
     disqualifier3()
 
 def disqualifier3():
-    credit_score = int(input('Enter Credit Score'))
-    while credit_score >= 650:
-        print('acceptable score')
-    else:
-        print('Unacceptable')
-        
+    credit_score = int(input("Enter your Credit Score: "))
+    while good_credit >= 650:
+        if credit_score >= good_credit:
+                print ('Your Credit Score is good') 
+        if credit_score < good_credit: 
+                print ('Your Credit Score is bad') 
+        break  
 
-    
+
 
 main ()
