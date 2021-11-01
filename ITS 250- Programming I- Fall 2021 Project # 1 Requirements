@@ -4,6 +4,8 @@ good_credit = 650
 bad_credit = 649
 
 def main():
+    ## This part of the program defines the basic info starting##
+    ## the program##
     first_name = input('Enter your first name: ')
     last_name = input('Enter your last name: ')
     current_education = input('Enter your Ed: ')
@@ -13,6 +15,9 @@ def main():
 
  
 def disqualifiers():
+    ## This disqualifier descriminates for the
+    ## over the age limit
+    ## for the military
     age = int(input('Enter your age: ')) 
     if age <= 42:
         print (' Qualified for age ')
@@ -22,6 +27,7 @@ def disqualifiers():
 
 
 def disqualifiers2():
+    ## This disqualifier decriminates the passing ASVAB score
     ASVAB_score = int(input('Enter ASVAB score: '))
     if ASVAB_score >= 31:
         print ('Qualified ASVAB Score')
@@ -30,6 +36,7 @@ def disqualifiers2():
     disqualifier3()
 
 def disqualifier3():
+## This disqualifier desciminates Credit acceptance for the military##
     credit_score = int(input("Enter your Credit Score: "))
     while good_credit >= 650:
         if credit_score >= good_credit:
@@ -38,6 +45,10 @@ def disqualifier3():
                 print ('Your Credit Score is bad') 
         break  
 
+    print("Please fill out questionnaire truthfully")
+    l = ["Thank you for your honesty"]
+    for i in l:
+     print(i)
 
 
 main ()
